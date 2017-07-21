@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :restaurants 
+  get 'home' => 'restaurants#index'
+  get 'random' => 'restaurants#random'
+  resources :restaurants
 end

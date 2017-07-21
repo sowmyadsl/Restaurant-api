@@ -20,9 +20,8 @@ GET http://localhost:3000/restaurants/:id will show an individual restaurant by 
 POST http://localhost:3000/restaurants will post a new restaurant.
 PUT http://localhost:3000/restaurants/:id will update a restaurant.
 DELETE http://localhost:3000/restaurants/:id will delete a restaurant with corresponding :id
-GET http://localhost:3000/restaurants?name=krajcik group will search the name of the restaurant and return the result.
-
-
+GET http://localhost:3000/restaurants?name=daniel Inc will search the name of the restaurant and return the result.
+GET http://localhost:3000/random will display a random restaurant
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
