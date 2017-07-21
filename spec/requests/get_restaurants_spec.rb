@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "get all restaurant route", :type => :request do
   let!(:restaurants) { FactoryGirl.create_list(:restaurant, 20)}
 
-  before { get '/restaurants'}
+  before { get '/v1/restaurants'}
 
   it 'returns all restaurants' do
     expect(JSON.parse(response.body).size).to eq(20)

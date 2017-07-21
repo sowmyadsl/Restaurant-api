@@ -1,4 +1,4 @@
-class RestaurantsController < ApplicationController
+class V1::RestaurantsController < ApplicationController
 
   def index
     if params[:name]
@@ -44,7 +44,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(number)
     json_response(@restaurant)
   end
-  
+
 
   private
   def json_response(object)

@@ -4,7 +4,7 @@ describe "post a restaurant route", :type => :request do
 restaurant = FactoryGirl.build(:restaurant)
 
   before do
-    post '/restaurants', params: {
+    post '/v1/restaurants', params: {
       :name => restaurant.name,
       :address => restaurant.address ,
       :phone_number => restaurant.phone_number
