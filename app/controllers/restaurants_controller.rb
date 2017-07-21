@@ -1,8 +1,15 @@
 class RestaurantsController < ApplicationController
 
   def index
-    @restaurants = Restaurant.all
+    if params[:name]
+      name = params[:name]
+    @restaurants = Restaurant.search(name)
+  else
+    @restaurants = Restaurant.all.as_json(root: true)
+
+  end
     json_response(@restaurants)
+
   end
 
   def show

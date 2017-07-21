@@ -8,6 +8,13 @@ Business information includes:
 * address
 * phone_number
 
+Users can access:
+* GET requests for restaurants.
+* POST, PATCH, PUT, DELETE requests restaurants.
+
+Scopes:
+* Filters by name.
+
 
 
 This README would normally document whatever steps are necessary to get the
