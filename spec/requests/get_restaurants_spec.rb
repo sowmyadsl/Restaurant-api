@@ -6,6 +6,6 @@ describe "get all restaurant route", :type => :request do
   before { get '/v1/restaurants'}
 
   it 'returns status code 200' do
-    expect(response).to have_http_status(:success)
+    expect(response).to have_http_status(200)
   end
 end

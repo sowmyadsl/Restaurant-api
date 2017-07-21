@@ -19,7 +19,7 @@ class V1::RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.create!(restaurant_params)
-    json_response(@restaurant)
+    json_response(@restaurant, :created)
   end
 
 

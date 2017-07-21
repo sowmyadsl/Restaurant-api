@@ -25,7 +25,7 @@ restaurant = FactoryGirl.build(:restaurant)
 
 
   it 'returns a created status' do
-    expect(response).to have_http_status(200)
+    expect(response).to have_http_status(201)
   end
 
 end
