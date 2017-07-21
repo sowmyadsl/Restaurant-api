@@ -6,11 +6,17 @@ class ReviewsController < ApplicationController
     json_response(@reviews)
   end
 
+  def show
+    @review = Review.find(params[:id])
+    json_response(@review)
+  end
+
   def new
     @restaurant = Restaurant.find(params[:restaurant_id])
     @review = @restaurant.reviews.new
     json_response(@review)
   end
+
 
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])

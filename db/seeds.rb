@@ -17,7 +17,7 @@ Review.destroy_all
                             )
                             25.times do
       new_restaurant.reviews.create!(author: Faker::Friends.character,
-                                content: Faker::Lorem.characters(100)
+                                content: Faker::Friends.quote
                                 )
   end
 end
