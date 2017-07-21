@@ -47,9 +47,6 @@ class V1::RestaurantsController < ApplicationController
 
 
   private
-  def json_response(object)
-    render json: object, status: :ok
-  end
 
   def restaurant_params
     params.permit(:name, :address, :phone_number)
