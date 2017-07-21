@@ -15,6 +15,13 @@ Users can access:
 Scopes:
 * Filters by name.
 
+End Points:
+GET http://localhost:3000/restaurants/:id will show an individual restaurant by :id
+POST http://localhost:3000/restaurants will post a new restaurant.
+PUT http://localhost:3000/restaurants/:id will update a restaurant.
+DELETE http://localhost:3000/restaurants/:id will delete a restaurant with corresponding :id
+GET http://localhost:3000/restaurants?name=krajcik group will search the name of the restaurant and return the result.
+
 
 
 This README would normally document whatever steps are necessary to get the
