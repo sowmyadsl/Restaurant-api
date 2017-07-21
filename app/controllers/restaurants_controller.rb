@@ -1,12 +1,36 @@
 class RestaurantsController < ApplicationController
 
   def index
-    @restaurants = {"Piazza Italia": "1129 NW Johnson St Portland OR 97209"  "5034355390"}
+    @restaurants = Restaurant.all
     json_response(@restaurants)
+  end
+
+  def show
+    @restaurant = Restaurant.find(params[:id])
+    json_response(@restaurant)
+  end
+
+  def create
+    @restaurant = Restaurant.create(restaurant_params)
+    json_response(@restaurant)
+  end
+
+  def update
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.update(restaurant_params)
+  end
+
+  def destroy
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.destroy
   end
 
   private
   def json_response(object)
     render json: object, status: :ok
+  end
+
+  def restaurant_params
+    params.permit(:name, :address, :phone_number)
   end
 end
