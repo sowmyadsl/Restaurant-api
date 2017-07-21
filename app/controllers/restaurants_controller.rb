@@ -19,7 +19,7 @@ class RestaurantsController < ApplicationController
 
   def create
     @restaurant = Restaurant.create!(restaurant_params)
-    json_response(@restaurant, 201)
+    json_response(@restaurant)
   end
 
 
@@ -35,7 +35,16 @@ class RestaurantsController < ApplicationController
   def destroy
     @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
+    render status: 200, json: { message: "Your restaurant has successfully been removed." }
   end
+
+  def random
+    length = Restaurant.all.count
+    number = 1 + rand(length);
+    @restaurant = Restaurant.find(number)
+    json_response(@restaurant)
+  end
+  
 
   private
   def json_response(object)
