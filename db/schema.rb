@@ -18,8 +18,7 @@ ActiveRecord::Schema.define(version: 20170721154256) do
   create_table "restaurants", force: :cascade do |t|
     t.string   "name"
     t.text     "address"
-    t.integer  "hours"
-    t.integer  "phone_number"
+    t.bigint   "phone_number"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
