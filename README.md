@@ -1,4 +1,14 @@
-# README
+# Local Business Look-up API
+
+This is an API that includes data for local restaurants and shops. It includes pagination and serialization to return the businesses. The application uses scopes to return random business.
+
+
+Business information includes:
+* name
+* address
+* phone_number
+
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
