@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+
   get 'home' => 'v1/restaurants#index'
-  get 'random' => 'v1/restaurants#random'
+  get '/v1/random' => 'v1/restaurants#random'
 
   concern :api_base do
     resources :restaurants
