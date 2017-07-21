@@ -15,36 +15,16 @@ Users can access:
 Scopes:
 * Filters by name.
 
+Additional exploration:
+* Add versioning and serializers to API.
+
 End Points:
 
 GET http://localhost:3000/v1/restaurants/:id will show an individual restaurant by :id
+[]!(https://github.com/sowmyadsl/restaurant-api/blob/master/public/get-route-id.png)
+
 POST http://localhost:3000/v1/restaurants will post a new restaurant.
 PUT http://localhost:3000/v1/restaurants/:id will update a restaurant.
 DELETE http://localhost:3000/v1/restaurants/:id will delete a restaurant with corresponding :id
 GET http://localhost:3000/v1/restaurants?name=daniel Inc will search the name of the restaurant and return the result.
 GET http://localhost:3000/v1/random will display a random restaurant
-
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
